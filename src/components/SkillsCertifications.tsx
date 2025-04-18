@@ -70,12 +70,13 @@ const certifications = [
     verifyUrl: "https://coursera.org/verify/professional-cert/Y39J96CDHAFW"
   },
   {
-    name: "Power BI for Beginners: Interactive dashboard Fundamentals",
+    name: "Power BI for Beginners: Interactive Dashboard Fundamentals",
     issuer: "Coursera",
     date: "Mar 2025",
-    credentialId: "CDRW3VP7F1HO",
+    credentialId: "CDRW3VP7H1FO",
     skills: ["Microsoft Power BI"],
-    logo: "/lovable-uploads/df2e7f0e-9247-47ab-bb42-da4d0a993905.png"
+    logo: "/lovable-uploads/926e4c2b-e44e-4870-a70e-4f5312ed54b1.png",
+    verifyUrl: "https://coursera.org/verify/CDRW3VP7H1FO"
   },
   {
     name: "Tata Group - Data Visualization: Empowering Business with Effective Insights Job Simulation",
