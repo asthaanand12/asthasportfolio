@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { Link } from "react-scroll";
@@ -53,7 +54,7 @@ const Hero = () => {
           >
             <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-beige-light shadow-xl">
               <img
-                src="/lovable-uploads/074779fe-515f-430d-a614-e7b9ca5cf8bf.png"
+                src="/lovable-uploads/4150ac88-8cbf-4064-b5b9-8e8de807210f.png"
                 alt="Astha Anand"
                 className="w-full h-full object-cover"
               />
