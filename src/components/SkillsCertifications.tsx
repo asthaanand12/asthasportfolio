@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { CheckCircle, Calendar, ExternalLink } from "lucide-react";
 
@@ -67,7 +66,8 @@ const certifications = [
       "Kaggle", 
       "Exploratory Data Analysis (EDA)"
     ],
-    logo: "/lovable-uploads/bdade880-7fd6-4eb4-a4fe-d1bf6c75f25a.png"
+    logo: "/lovable-uploads/6fd5ff4f-3753-434c-8502-a069d6c6b670.png",
+    verifyUrl: "https://coursera.org/verify/professional-cert/Y39J96CDHAFW"
   },
   {
     name: "Power BI for Beginners: Interactive dashboard Fundamentals",
