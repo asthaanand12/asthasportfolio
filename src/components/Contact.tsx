@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Linkedin, Github, Twitter } from "lucide-react";
 import { useState } from "react";
@@ -74,8 +73,11 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="text-gray-900 font-medium">Email</h4>
-                    <a href="mailto:contact@asthaanand.com" className="text-data hover:text-data-dark transition-colors">
-                      contact@asthaanand.com
+                    <a 
+                      href="mailto:asthaanand1211@gmail.com" 
+                      className="text-data hover:text-data-dark transition-colors"
+                    >
+                      asthaanand1211@gmail.com
                     </a>
                   </div>
                 </div>
@@ -86,8 +88,11 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="text-gray-900 font-medium">Phone</h4>
-                    <a href="tel:+910000000000" className="text-data hover:text-data-dark transition-colors">
-                      +91 00000 00000
+                    <a 
+                      href="tel:+916207513926" 
+                      className="text-data hover:text-data-dark transition-colors"
+                    >
+                      +91 6207513926
                     </a>
                   </div>
                 </div>
