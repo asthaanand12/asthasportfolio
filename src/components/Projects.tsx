@@ -40,15 +40,15 @@ const projects = [
   {
     title: "Daily Planner Website",
     period: "Feb 2023 - Mar 2023",
-    description: "A responsive web application designed to help users organize tasks, set reminders, and manage daily schedules efficiently. Built with HTML, CSS, JavaScript, and MySQL for storing user data, it offers an intuitive interface for seamless task tracking and productivity.",
+    description: "A responsive web application designed to help users organize tasks, set reminders, and manage daily schedules efficiently. Features include task management, reminders, weekly targets, and note-taking capabilities. Built with HTML, CSS, JavaScript for an intuitive user experience.",
     skills: ["HTML", "CSS", "JavaScript", "MySQL"],
     images: [
-      "/lovable-uploads/4a7d2943-c876-4bc4-815e-63cfa15556a5.png",
-      "/lovable-uploads/7c5e9645-2552-4531-a55c-420a7de6d5a9.png",
-      "/lovable-uploads/d94da43d-dcd3-410a-94ee-830e02e39a5e.png",
-      "/lovable-uploads/dd1aa1b5-446d-4083-b589-ffcf80f92e0c.png",
-      "/lovable-uploads/d7ac2654-2d72-44cd-925f-092108d97927.png",
-      "/lovable-uploads/888a4c16-8505-4491-bb01-ef349bdfeda8.png"
+      "/lovable-uploads/478df39a-51c9-4f9b-b014-efaa46792cd9.png",
+      "/lovable-uploads/a4e19db1-afc8-4a36-8b96-a7e813d32f20.png", 
+      "/lovable-uploads/2b03c07a-d28d-4ed3-bc0e-d2ab9b932e44.png",
+      "/lovable-uploads/06af4e60-33df-43a7-ad1e-1129b5d07504.png",
+      "/lovable-uploads/ec2dd6f8-f965-4a1c-9b00-ca489c7a1df9.png",
+      "/lovable-uploads/ce8ecd4d-dc18-43a9-bea3-54445b89e77d.png"
     ]
   }
 ];
