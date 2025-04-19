@@ -1,7 +1,6 @@
-
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ExternalLink, Github, Calendar } from "lucide-react";
+import { Calendar } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -19,9 +18,10 @@ const projects = [
     description: "The project involves the development of an American Sign Language (ASL) recognition system capable of converting hand gestures into text and speech. The primary goal is to create an assistive technology tool for bridging communication gaps between the hearing-impaired community and others. The system leverages computer vision for gesture detection and recurrent neural networks (RNN) for real-time gesture classification and translation into text and voice.",
     skills: ["OpenCV", "Model Training", "AI", "CNN", "Team Leadership", "Keras"],
     images: [
-      "/lovable-uploads/6921e3b2-2448-4452-9010-b8fea4cfb21a.png",
-      "/lovable-uploads/edc749da-2bd7-467f-8ab2-b0027c760326.png",
-      "/lovable-uploads/26d6a278-b5dd-476c-9803-1f7881575409.png"
+      "/lovable-uploads/9a0ab027-7e91-404f-80f3-063bc8e9ef66.png",
+      "/lovable-uploads/2443f5e9-c37a-41a5-8b65-cd4477f333ad.png",
+      "/lovable-uploads/deab305f-8373-4255-9e58-3ca737f654a1.png",
+      "/lovable-uploads/40fafc8f-c1fa-4033-89da-683bf0e257e5.png"
     ]
   },
   {
