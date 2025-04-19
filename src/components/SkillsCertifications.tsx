@@ -76,28 +76,48 @@ const certifications = [
       "Kaggle",
       "Exploratory Data Analysis (EDA)"
     ],
-    logo: "/lovable-uploads/6fd5ff4f-3753-434c-8502-a069d6c6b670.png",
+    logo: "/lovable-uploads/ebb27ad2-cd15-4d4a-a400-bfac73d5dcd7.png",
     verifyUrl: "https://coursera.org/verify/professional-cert/Y39J96CDHAFW",
-    fullImage: "/lovable-uploads/74229dfd-1d6a-4189-a0a1-ee4704e58f91.png"
+    fullImage: "/lovable-uploads/ebb27ad2-cd15-4d4a-a400-bfac73d5dcd7.png"
   },
   {
     name: "Power BI for Beginners: Interactive Dashboard Fundamentals",
     issuer: "Coursera",
     date: "Mar 2025",
     credentialId: "CDRW3VP7H1FO",
-    skills: ["Microsoft Power BI"],
-    logo: "/lovable-uploads/926e4c2b-e44e-4870-a70e-4f5312ed54b1.png",
+    skills: ["Microsoft Power BI", "Data Visualization"],
+    logo: "/lovable-uploads/b8705eb6-b51a-46e4-ab99-ca57853b87cc.png",
     verifyUrl: "https://coursera.org/verify/CDRW3VP7H1FO",
-    fullImage: "/lovable-uploads/367e404b-ff66-4b24-a956-15eb84da3810.png"
+    fullImage: "/lovable-uploads/b8705eb6-b51a-46e4-ab99-ca57853b87cc.png"
   },
   {
-    name: "Tata Group - Data Visualization: Empowering Business with Effective Insights Job Simulation",
-    issuer: "Forage",
+    name: "Data Analytics Internship",
+    issuer: "Oasis Infobyte",
+    date: "Feb 2025 - Mar 2025",
+    type: "AICTE OIB-SIP Internship",
+    credentialId: "OIB/F1/IP326",
+    skills: ["Data Analytics", "Data Visualization", "Statistical Analysis"],
+    logo: "/lovable-uploads/9ad5b267-03ef-49fd-bac8-fa18c51ae6fa.png",
+    fullImage: "/lovable-uploads/9ad5b267-03ef-49fd-bac8-fa18c51ae6fa.png"
+  },
+  {
+    name: "Data Visualization: Empowering Business with Effective Insights",
+    issuer: "Tata Group - Forage",
     date: "Jan 2025",
     credentialId: "pXFZh5PSZc9qD6PfP",
     skills: ["Data Analytics", "Data Visualization", "Data Clean Up"],
-    logo: "/lovable-uploads/a6ee4902-4059-460f-b964-612d4cb6deee.png",
-    fullImage: "/lovable-uploads/c4142c94-7ddc-4bc1-9a7a-0c292adf7551.png"
+    logo: "/lovable-uploads/f7d18d65-b06c-458c-a203-133976a3302a.png",
+    fullImage: "/lovable-uploads/f7d18d65-b06c-458c-a203-133976a3302a.png"
+  },
+  {
+    name: "Summer Internship - JavaScript Development",
+    issuer: "Eimple Labs",
+    date: "Jun 2023 - Jul 2023",
+    type: "Internship",
+    credentialId: "EE/23/IN/EL/2304047",
+    skills: ["JavaScript", "Web Development", "Application Development"],
+    logo: "/lovable-uploads/d7070fde-9367-455d-9c67-fc0379982dd2.png",
+    fullImage: "/lovable-uploads/d7070fde-9367-455d-9c67-fc0379982dd2.png"
   }
 ];
 
