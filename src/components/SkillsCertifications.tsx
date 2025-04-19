@@ -1,5 +1,15 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { CheckCircle, Calendar, ExternalLink } from "lucide-react";
+import { Card, CardContent } from "./ui/card";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "./ui/dialog";
 
 const skillCategories = [
   {
@@ -58,16 +68,17 @@ const certifications = [
     date: "Mar 2025",
     credentialId: "Y39J96CDHAFW",
     skills: [
-      "Data Science", 
-      "Statistical Data Analysis", 
-      "Python Programming", 
-      "Regression Models", 
-      "Predictive Modeling", 
-      "Kaggle", 
+      "Data Science",
+      "Statistical Data Analysis",
+      "Python Programming",
+      "Regression Models",
+      "Predictive Modeling",
+      "Kaggle",
       "Exploratory Data Analysis (EDA)"
     ],
     logo: "/lovable-uploads/6fd5ff4f-3753-434c-8502-a069d6c6b670.png",
-    verifyUrl: "https://coursera.org/verify/professional-cert/Y39J96CDHAFW"
+    verifyUrl: "https://coursera.org/verify/professional-cert/Y39J96CDHAFW",
+    fullImage: "/lovable-uploads/74229dfd-1d6a-4189-a0a1-ee4704e58f91.png"
   },
   {
     name: "Power BI for Beginners: Interactive Dashboard Fundamentals",
@@ -76,7 +87,8 @@ const certifications = [
     credentialId: "CDRW3VP7H1FO",
     skills: ["Microsoft Power BI"],
     logo: "/lovable-uploads/926e4c2b-e44e-4870-a70e-4f5312ed54b1.png",
-    verifyUrl: "https://coursera.org/verify/CDRW3VP7H1FO"
+    verifyUrl: "https://coursera.org/verify/CDRW3VP7H1FO",
+    fullImage: "/lovable-uploads/367e404b-ff66-4b24-a956-15eb84da3810.png"
   },
   {
     name: "Tata Group - Data Visualization: Empowering Business with Effective Insights Job Simulation",
@@ -84,7 +96,8 @@ const certifications = [
     date: "Jan 2025",
     credentialId: "pXFZh5PSZc9qD6PfP",
     skills: ["Data Analytics", "Data Visualization", "Data Clean Up"],
-    logo: "/lovable-uploads/a6ee4902-4059-460f-b964-612d4cb6deee.png"
+    logo: "/lovable-uploads/a6ee4902-4059-460f-b964-612d4cb6deee.png",
+    fullImage: "/lovable-uploads/c4142c94-7ddc-4bc1-9a7a-0c292adf7551.png"
   }
 ];
 
@@ -149,55 +162,82 @@ const SkillsCertifications = () => {
 
             <div className="space-y-6">
               {certifications.map((cert, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-white p-6 rounded-lg shadow-md card-hover"
-                >
-                  <div className="flex items-start">
-                    <div className="w-16 h-16 mr-4 flex-shrink-0">
-                      <img 
-                        src={cert.logo} 
-                        alt={cert.issuer} 
-                        className="w-full h-full object-contain"
+                <Dialog key={index}>
+                  <DialogTrigger asChild>
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                      className="bg-white p-6 rounded-lg shadow-md card-hover cursor-pointer"
+                    >
+                      <div className="flex items-start">
+                        <div className="w-16 h-16 mr-4 flex-shrink-0">
+                          <img
+                            src={cert.logo}
+                            alt={cert.issuer}
+                            className="w-full h-full object-contain"
+                          />
+                        </div>
+                        <div className="flex-1">
+                          <h3 className="text-lg font-semibold text-gray-800">
+                            {cert.name}
+                          </h3>
+                          <p className="text-data font-medium">{cert.issuer}</p>
+
+                          <div className="flex items-center text-gray-600 mt-2 mb-3">
+                            <Calendar size={16} className="mr-2" />
+                            <span>Issued {cert.date}</span>
+                          </div>
+
+                          <p className="text-sm text-gray-600 mb-1">
+                            Credential ID: {cert.credentialId}
+                          </p>
+
+                          {cert.verifyUrl && (
+                            <a
+                              href={cert.verifyUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-data text-sm flex items-center font-medium mt-1 hover:text-data-dark transition-colors"
+                            >
+                              <ExternalLink size={14} className="mr-1" />
+                              Verify credential
+                            </a>
+                          )}
+
+                          {cert.skills.length > 0 && (
+                            <div className="mt-4">
+                              <p className="text-sm text-gray-600 mb-2">Skills:</p>
+                              <div className="flex flex-wrap">
+                                {cert.skills.map((skill, idx) => (
+                                  <span key={idx} className="skill-badge">
+                                    {skill}
+                                  </span>
+                                ))}
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    </motion.div>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-4xl">
+                    <DialogHeader>
+                      <DialogTitle>{cert.name}</DialogTitle>
+                      <DialogDescription>
+                        Issued by {cert.issuer} on {cert.date}
+                      </DialogDescription>
+                    </DialogHeader>
+                    <div className="mt-4">
+                      <img
+                        src={cert.fullImage}
+                        alt={cert.name}
+                        className="w-full rounded-lg"
                       />
                     </div>
-                    <div className="flex-1">
-                      <h3 className="text-lg font-semibold text-gray-800">{cert.name}</h3>
-                      <p className="text-data font-medium">{cert.issuer}</p>
-                      
-                      <div className="flex items-center text-gray-600 mt-2 mb-3">
-                        <Calendar size={16} className="mr-2" />
-                        <span>Issued {cert.date}</span>
-                      </div>
-                      
-                      <p className="text-sm text-gray-600 mb-1">
-                        Credential ID: {cert.credentialId}
-                      </p>
-                      
-                      <button className="text-data text-sm flex items-center font-medium mt-1 hover:text-data-dark transition-colors">
-                        <ExternalLink size={14} className="mr-1" />
-                        Show credential
-                      </button>
-                      
-                      {cert.skills.length > 0 && (
-                        <div className="mt-4">
-                          <p className="text-sm text-gray-600 mb-2">Skills:</p>
-                          <div className="flex flex-wrap">
-                            {cert.skills.map((skill, idx) => (
-                              <span key={idx} className="skill-badge">
-                                {skill}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                </motion.div>
+                  </DialogContent>
+                </Dialog>
               ))}
             </div>
           </div>
