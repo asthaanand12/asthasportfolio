@@ -15,8 +15,8 @@ const projects = [
     title: "ASL Sign Language Detection System",
     period: "May 2024 - Jun 2024",
     association: "Jharkhand Raksha Shakti University",
-    description: "The project involves the development of an American Sign Language (ASL) recognition system capable of converting hand gestures into text and speech. The primary goal is to create an assistive technology tool for bridging communication gaps between the hearing-impaired community and others. The system leverages computer vision for gesture detection and recurrent neural networks (RNN) for real-time gesture classification and translation into text and voice.",
-    skills: ["OpenCV", "Model Training", "AI", "CNN", "Team Leadership", "Keras"],
+    description: "Developed a real-time American Sign Language (ASL) detection system using Convolutional Neural Networks (CNN), integrated with OpenCV, Keras, and TensorFlow. The system captures hand gestures through webcam input, processes the frames using image preprocessing techniques, and classifies the signs with high accuracy. It enables intuitive, camera-based gesture recognition to support inclusive and accessible communication.",
+    skills: ["CNN", "OpenCV", "Keras", "TensorFlow", "Python"],
     images: [
       "/lovable-uploads/9a0ab027-7e91-404f-80f3-063bc8e9ef66.png",
       "/lovable-uploads/2443f5e9-c37a-41a5-8b65-cd4477f333ad.png",
@@ -27,14 +27,15 @@ const projects = [
   {
     title: "Blockchain-Based Voting System",
     period: "Jan 2024 - Mar 2024",
-    association: "Oasis Infobyte",
-    description: "A secure, transparent, and tamper-proof digital voting platform using blockchain technology. The system leverages the decentralized and immutable nature of blockchain to ensure that every vote cast is recorded permanently and cannot be altered or deleted.",
+    description: "A secure and transparent digital voting platform built using blockchain technology. This system ensures tamper-proof vote recording, leveraging the decentralized and immutable nature of blockchain.\n\nKey features:\n\n• Voter authentication using digital IDs\n• End-to-end encryption for vote privacy\n• Smart contracts to automate fair voting\n• Publicly verifiable ledger without revealing voter identities\n\nThis project promotes trust, accessibility, and transparency in digital elections.",
     skills: ["Blockchain Development", "Smart Contracts", "Cryptography", "Web Development"],
     images: [
-      "/lovable-uploads/93583455-6ace-4cbd-bbcd-043dd8425761.png",
-      "/lovable-uploads/827ce4f0-fc04-4fa4-a6cb-0ac2584d1c18.png",
-      "/lovable-uploads/f2a365ef-abbb-4290-9879-530c6632dc5f.png",
-      "/lovable-uploads/feefeb30-cb3a-49ea-ba4c-fc5371e070b2.png"
+      "/lovable-uploads/731cffef-39ba-48ab-bdde-dd7a4d8de568.png",
+      "/lovable-uploads/1bc78405-ba12-4f0b-adc0-6b2674f3965d.png",
+      "/lovable-uploads/b6c5b411-71f3-4c26-8e92-fd48f82f509b.png",
+      "/lovable-uploads/6924da23-7c9c-4d3c-a4b6-7ad6c974d49c.png",
+      "/lovable-uploads/f78a006b-64e9-4f09-aa14-0ac69d6dd93a.png",
+      "/lovable-uploads/d417dcd4-4c0e-479a-a6b6-94a2426f9e18.png"
     ]
   },
   {
