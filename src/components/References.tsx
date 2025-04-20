@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import {
   Dialog,
@@ -10,14 +9,15 @@ import {
 
 const references = [
   {
-    name: "Professor Name 1",
-    title: "Professor of Computer Science",
+    name: "Mr. Vikash Kumar Agarwal",
+    title: "Head of Department",
+    department: "Computer Application and Cyber Security",
     institution: "Jharkhand Raksha Shakti University",
     letter: "/path-to-reference-letter-1.png"
   },
   {
-    name: "Professor Name 2",
-    title: "Professor of Cyber Security",
+    name: "Dr. Priya Namrata Topno",
+    title: "Placement Cell In-Charge",
     institution: "Jharkhand Raksha Shakti University",
     letter: "/path-to-reference-letter-2.png"
   }
@@ -54,6 +54,9 @@ const References = () => {
                   <div className="bg-white p-6 rounded-lg shadow-md cursor-pointer hover:shadow-lg transition-shadow">
                     <h3 className="text-xl font-semibold text-gray-800">{ref.name}</h3>
                     <p className="text-data font-medium">{ref.title}</p>
+                    {ref.department && (
+                      <p className="text-gray-600">{ref.department}</p>
+                    )}
                     <p className="text-gray-600">{ref.institution}</p>
                     <button className="mt-4 text-blue-600 hover:text-blue-700">
                       View Reference Letter

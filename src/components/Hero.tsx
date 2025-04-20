@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { Link } from "react-scroll";
@@ -22,13 +21,11 @@ const Hero = () => {
               Astha Anand
             </h1>
             <h2 className="text-xl md:text-2xl text-gray-600 mb-6 font-light">
-              AI Enthusiast | Data Analytics | Machine Learning | Front-End Developer
+              Designing and developing intelligent solutions with purpose, precision, and people in mind.
             </h2>
             <p className="text-gray-600 mb-8 max-w-lg mx-auto md:mx-0">
-              A data-driven AI enthusiast with a background in computer applications, 
-              passionate about creating intuitive, accessible digital experiences. 
-              I explore the intersection of technology and human interaction, 
-              designing solutions that are both functional and empathetic.
+              Passionate about data, software, and intuitive digital solutions. I explore the intersection 
+              of technology and human-centered design to build meaningful, accessible, and functional experiences.
             </p>
             <div className="flex flex-wrap justify-center md:justify-start gap-4">
               <a 

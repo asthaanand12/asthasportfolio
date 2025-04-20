@@ -83,7 +83,7 @@ export const certifications = [
     date: "Jan 2025",
     credentialId: "pXFZh5PSZc9qD6PfP",
     skills: ["Data Analytics", "Data Visualization", "Data Clean Up"],
-    logo: "/lovable-uploads/f7d18d65-b06c-458c-a203-133976a3302a.png",
-    fullImage: "/lovable-uploads/f7d18d65-b06c-458c-a203-133976a3302a.png"
+    logo: "/lovable-uploads/0e57a448-a8a3-4571-b9d6-30a3ef23ad61.png",
+    fullImage: "/lovable-uploads/0e57a448-a8a3-4571-b9d6-30a3ef23ad61.png"
   }
 ];

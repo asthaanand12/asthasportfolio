@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Mail, MapPin, GraduationCap, Briefcase } from "lucide-react";
 
@@ -25,10 +24,15 @@ const About = () => {
             className="col-span-2"
           >
             <p className="text-gray-700 leading-relaxed mb-6">
-              I am a passionate software, data science, and machine learning enthusiast with a strong commitment to turning complex data into actionable insights. Recently, I participated in a comprehensive data visualization program, enhancing my ability to present data effectively and drive informed decision-making.
+              I'm a tech-driven learner with a strong foundation in computer applications and cybersecurity, 
+              fueled by a passion for solving real-world problems through data and intelligent systems. 
+              My interest lies in the intersection of software development, machine learning, and user-centered design—where 
+              technology becomes both smart and meaningful.
             </p>
             <p className="text-gray-700 leading-relaxed mb-6">
-              I am actively seeking opportunities to contribute my skills in developing innovative solutions, leveraging data-driven strategies, and collaborating on impactful projects.
+              With hands-on experience in building functional applications and drawing insights from complex datasets, 
+              I aim to deepen my expertise through advanced study and research. I'm eager to explore innovative ideas, 
+              collaborate with diverse minds, and contribute to shaping digital experiences that truly make a difference.
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
@@ -48,7 +52,7 @@ const About = () => {
                 </div>
                 <div>
                   <h3 className="text-gray-900 font-semibold">Email</h3>
-                  <p className="text-gray-600">contact@asthaanand.com</p>
+                  <p className="text-gray-600">asthaanand1211@gmail.com</p>
                 </div>
               </div>
               
@@ -58,7 +62,7 @@ const About = () => {
                 </div>
                 <div>
                   <h3 className="text-gray-900 font-semibold">Education</h3>
-                  <p className="text-gray-600">Bachelor's in Cyber Security</p>
+                  <p className="text-gray-600">Bachelor's in Computer Application and Cyber Security</p>
                 </div>
               </div>
               

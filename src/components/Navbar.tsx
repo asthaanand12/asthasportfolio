@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import { Menu, X } from "lucide-react";
@@ -10,6 +9,7 @@ const navLinks = [
   { name: "Education", id: "education" },
   { name: "Skills", id: "skills" },
   { name: "Projects", id: "projects" },
+  { name: "References", id: "references" },
   { name: "Contact", id: "contact" },
 ];
 
