@@ -1,4 +1,3 @@
-
 export const skillCategories = [
   {
     name: "Data Science & Analytics",
@@ -79,16 +78,6 @@ export const certifications = [
     fullImage: "/lovable-uploads/b8705eb6-b51a-46e4-ab99-ca57853b87cc.png"
   },
   {
-    name: "Data Analytics Internship",
-    issuer: "Oasis Infobyte",
-    date: "Feb 2025 - Mar 2025",
-    type: "AICTE OIB-SIP Internship",
-    credentialId: "OIB/F1/IP326",
-    skills: ["Data Analytics", "Data Visualization", "Statistical Analysis"],
-    logo: "/lovable-uploads/9ad5b267-03ef-49fd-bac8-fa18c51ae6fa.png",
-    fullImage: "/lovable-uploads/9ad5b267-03ef-49fd-bac8-fa18c51ae6fa.png"
-  },
-  {
     name: "Data Visualization: Empowering Business with Effective Insights",
     issuer: "Tata Group - Forage",
     date: "Jan 2025",
@@ -96,15 +85,5 @@ export const certifications = [
     skills: ["Data Analytics", "Data Visualization", "Data Clean Up"],
     logo: "/lovable-uploads/f7d18d65-b06c-458c-a203-133976a3302a.png",
     fullImage: "/lovable-uploads/f7d18d65-b06c-458c-a203-133976a3302a.png"
-  },
-  {
-    name: "Summer Internship - JavaScript Development",
-    issuer: "Eimple Labs",
-    date: "Jun 2023 - Jul 2023",
-    type: "Internship",
-    credentialId: "EE/23/IN/EL/2304047",
-    skills: ["JavaScript", "Web Development", "Application Development"],
-    logo: "/lovable-uploads/d7070fde-9367-455d-9c67-fc0379982dd2.png",
-    fullImage: "/lovable-uploads/d7070fde-9367-455d-9c67-fc0379982dd2.png"
   }
 ];

@@ -1,25 +1,36 @@
 
 import { motion } from "framer-motion";
-import { Calendar, MapPin } from "lucide-react";
+import { MapPin } from "lucide-react";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "./ui/dialog";
 
 const experiences = [
   {
-    title: "Data Analytics",
+    title: "Data Analytics Internship",
     company: "Oasis Infobyte",
     period: "Feb 2025 - Mar 2025",
     location: "Remote",
-    type: "Internship",
+    type: "AICTE OIB-SIP Internship",
     description: "Worked on data analysis and visualization projects, including predictive models and customer segmentation analysis.",
-    skills: ["Data Analysis", "Data Visualization", "Predictive Modeling"]
+    skills: ["Data Analytics", "Data Visualization", "Statistical Analysis"],
+    certificate: "/lovable-uploads/537d7189-471a-466d-bee3-4f4927a323a7.png",
+    credentialId: "OIB/F1/IP326"
   },
   {
-    title: "Summer Intern",
+    title: "Summer Intern at Eimple Labs Bangalore",
     company: "Eimple Labs",
     period: "Jun 2023 - Jul 2023",
-    location: "Remote",
+    location: "Bangalore, India",
     type: "Internship",
     description: "Contributed to web development projects and gained experience with JavaScript and related technologies.",
-    skills: ["JavaScript", "Web Development", "+4 skills"]
+    skills: ["JavaScript", "Web Development", "Application Development"],
+    certificate: "/lovable-uploads/3652ae6a-05b0-4214-92a3-78db5248267f.png",
+    credentialId: "EE/23/IN/EL/2304047"
   }
 ];
 
@@ -42,43 +53,61 @@ const Experience = () => {
 
         <div className="space-y-8">
           {experiences.map((exp, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="timeline-item"
-            >
-              <div className="bg-white p-6 rounded-lg shadow-md ml-4 card-hover">
-                <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-800">{exp.title}</h3>
-                    <p className="text-data font-medium">{exp.company} · {exp.type}</p>
+            <Dialog key={index}>
+              <DialogTrigger asChild>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="timeline-item cursor-pointer"
+                >
+                  <div className="bg-white p-6 rounded-lg shadow-md ml-4 card-hover">
+                    <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                      <div>
+                        <h3 className="text-xl font-semibold text-gray-800">{exp.title}</h3>
+                        <p className="text-data font-medium">{exp.company} · {exp.type}</p>
+                      </div>
+                      <div className="mt-2 md:mt-0 bg-beige-light px-3 py-1 rounded text-sm font-medium text-data-dark inline-flex">
+                        {exp.period}
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center text-gray-600 mb-4">
+                      <MapPin size={16} className="mr-2" />
+                      <span>{exp.location}</span>
+                    </div>
+                    
+                    <p className="text-gray-700 mb-4">
+                      {exp.description}
+                    </p>
+                    
+                    <div className="flex flex-wrap gap-2">
+                      {exp.skills.map((skill, idx) => (
+                        <span key={idx} className="skill-badge">
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                  <div className="mt-2 md:mt-0 bg-beige-light px-3 py-1 rounded text-sm font-medium text-data-dark inline-flex">
-                    {exp.period}
-                  </div>
+                </motion.div>
+              </DialogTrigger>
+              <DialogContent className="max-w-4xl">
+                <DialogHeader>
+                  <DialogTitle>{exp.title} Certificate</DialogTitle>
+                </DialogHeader>
+                <div className="mt-4">
+                  <img
+                    src={exp.certificate}
+                    alt={`${exp.title} Certificate`}
+                    className="w-full rounded-lg"
+                  />
+                  <p className="text-sm text-gray-500 mt-2">
+                    Credential ID: {exp.credentialId}
+                  </p>
                 </div>
-                
-                <div className="flex items-center text-gray-600 mb-4">
-                  <MapPin size={16} className="mr-2" />
-                  <span>{exp.location}</span>
-                </div>
-                
-                <p className="text-gray-700 mb-4">
-                  {exp.description}
-                </p>
-                
-                <div className="flex flex-wrap">
-                  {exp.skills.map((skill, idx) => (
-                    <span key={idx} className="skill-badge">
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </motion.div>
+              </DialogContent>
+            </Dialog>
           ))}
         </div>
       </div>
