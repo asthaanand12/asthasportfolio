@@ -16,7 +16,7 @@ const experiences = [
     period: "Feb 2025 - Mar 2025",
     location: "Remote",
     type: "AICTE OIB-SIP Internship",
-    description: "Worked on data analysis and visualization projects, including predictive models and customer segmentation analysis.",
+    description: "Conducted comprehensive exploratory data analysis (EDA) to extract actionable insights. Built a housing price prediction model using linear regression with Scikit-Learn.",
     skills: ["Data Analytics", "Data Visualization", "Statistical Analysis"],
     certificate: "/lovable-uploads/537d7189-471a-466d-bee3-4f4927a323a7.png",
     credentialId: "OIB/F1/IP326"
@@ -27,7 +27,7 @@ const experiences = [
     period: "Jun 2023 - Jul 2023",
     location: "Bangalore, India",
     type: "Internship",
-    description: "Contributed to web development projects and gained experience with JavaScript and related technologies.",
+    description: "Designed and developed responsive web interfaces using HTML, CSS, and JavaScript. Utilized Git for version control and collaborated with design prototypes using Figma.",
     skills: ["JavaScript", "Web Development", "Application Development"],
     certificate: "/lovable-uploads/3652ae6a-05b0-4214-92a3-78db5248267f.png",
     credentialId: "EE/23/IN/EL/2304047"

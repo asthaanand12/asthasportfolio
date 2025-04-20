@@ -1,32 +1,32 @@
 import { motion } from "framer-motion";
-import { Calendar, Award } from "lucide-react";
+import { Award } from "lucide-react";
 
 const educations = [
   {
     institution: "Jharkhand Raksha Shakti University",
-    degree: "Bachelor of Computer Applications in Cyber Security",
+    degree: "Bachelor of Computer Applications",
     field: "Cyber Security",
     period: "2021 - 2024",
-    grade: "9.25/10",
+    grade: "9.28/10 CGPA",
     skills: [
-      "Organization Skills", 
-      "Computer Science", 
-      "Microsoft Excel", 
-      "Research Skills", 
-      "Communication"
+      "Data Structures Using C",
+      "Database Management Systems",
+      "Software Engineering",
+      "Information Security and Cyber Law",
+      "Cloud Computing"
     ]
   },
   {
     institution: "Kendriya Vidyalaya",
-    degree: "Intermediate",
+    degree: "Senior School Certificate",
     field: "Science",
     period: "Jun 2019 - Mar 2021",
-    grade: "88%",
-    skills: ["Reasoning Skills"]
+    grade: "520/600",
+    skills: ["Physics", "Chemistry", "Mathematics", "Computer Science"]
   },
   {
     institution: "St. Francis School Banhora Ranchi",
-    degree: "Matriculation",
+    degree: "Secondary School Certificate",
     field: "",
     period: "Mar 2010 - Mar 2019",
     grade: "93%",
@@ -65,17 +65,9 @@ const Education = () => {
                 <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
                   <div className="flex items-start">
                     <div className="mr-4">
-                      {index === 1 ? (
-                        <img 
-                          src="/lovable-uploads/25666937-6c8d-46c7-b67d-9fc5f2508999.png" 
-                          alt={edu.institution} 
-                          className="w-16 h-16 object-contain"
-                        />
-                      ) : (
-                        <div className="w-16 h-16 bg-beige flex items-center justify-center rounded-full">
-                          <Award className="text-data-dark" size={28} />
-                        </div>
-                      )}
+                      <div className="w-16 h-16 bg-beige flex items-center justify-center rounded-full">
+                        <Award className="text-data-dark" size={28} />
+                      </div>
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-gray-800">{edu.institution}</h3>
@@ -94,7 +86,7 @@ const Education = () => {
                 
                 {edu.skills.length > 0 && (
                   <div className="mt-4">
-                    <p className="text-sm text-gray-600 mb-2">Skills:</p>
+                    <p className="text-sm text-gray-600 mb-2">Skills/Subjects:</p>
                     <div className="flex flex-wrap">
                       {edu.skills.map((skill, idx) => (
                         <span key={idx} className="skill-badge">
