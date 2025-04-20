@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Calendar, Award } from "lucide-react";
 
@@ -66,7 +65,7 @@ const Education = () => {
                 <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
                   <div className="flex items-start">
                     <div className="mr-4">
-                      {index === 0 ? (
+                      {index === 1 ? (
                         <img 
                           src="/lovable-uploads/25666937-6c8d-46c7-b67d-9fc5f2508999.png" 
                           alt={edu.institution} 
