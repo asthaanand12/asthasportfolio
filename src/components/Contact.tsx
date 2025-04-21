@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Linkedin, Github, Twitter } from "lucide-react";
 import { useState } from "react";
@@ -18,11 +19,17 @@ const Contact = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
+  // Use mailto link for sending messages
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
+
+    // Build mailto URI
+    const mailto = `mailto:asthaanand1212@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`
+    )}`;
+
+    window.location.href = mailto;
     setTimeout(() => {
       setIsSubmitting(false);
       setSubmitted(true);
@@ -32,12 +39,11 @@ const Contact = () => {
         subject: "",
         message: "",
       });
-      
-      // Reset success message after 5 seconds
+
       setTimeout(() => {
         setSubmitted(false);
       }, 5000);
-    }, 1500);
+    }, 500); // Only loading for half a second since user leaves the page anyway
   };
 
   return (
@@ -114,16 +120,20 @@ const Contact = () => {
                 <h3 className="text-xl font-semibold text-gray-800 mb-4">Connect With Me</h3>
                 <div className="flex space-x-4">
                   <a 
-                    href="#" 
+                    href="https://www.linkedin.com/in/astha12" 
                     className="bg-beige hover:bg-beige-dark transition-colors rounded-full p-3"
                     aria-label="LinkedIn"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <Linkedin className="text-data-dark" size={24} />
                   </a>
                   <a 
-                    href="#" 
+                    href="https://github.com/asthaanand12/My-Portfolio" 
                     className="bg-beige hover:bg-beige-dark transition-colors rounded-full p-3"
                     aria-label="GitHub"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <Github className="text-data-dark" size={24} />
                   </a>
@@ -234,3 +244,4 @@ const Contact = () => {
 };
 
 export default Contact;
+

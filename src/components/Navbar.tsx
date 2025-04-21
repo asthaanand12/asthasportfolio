@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import { Menu, X } from "lucide-react";
@@ -52,7 +53,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden md:flex items-center space-x-2">
           {navLinks.map((link) => (
             <Link
               key={link.id}
@@ -61,10 +62,13 @@ const Navbar = () => {
               smooth={true}
               offset={-70}
               duration={500}
-              className="text-gray-700 hover:text-data font-medium cursor-pointer transition-colors"
-              activeClass="text-data-dark"
+              className="relative group text-gray-700 font-medium cursor-pointer transition-colors px-4 py-2 rounded-md hover:bg-gradient-to-br hover:from-data-light hover:to-beige-light hover:text-white shadow-custom-md focus:bg-data-dark focus:text-white active:scale-95"
+              activeClass="text-data-dark bg-gradient-to-br from-data-dark to-data-light"
+              style={{ transition: "background 0.3s, color 0.3s, box-shadow 0.3s" }}
             >
-              {link.name}
+              <span className="z-10 relative group-hover:drop-shadow-lg">{link.name}</span>
+              {/* Animated underline */}
+              <span className="absolute left-3 right-3 -bottom-1 h-1 bg-data-light rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
             </Link>
           ))}
         </div>
@@ -102,8 +106,14 @@ const Navbar = () => {
           </div>
         </div>
       )}
+      <style jsx>{`
+        .shadow-custom-md {
+          box-shadow: 0 2px 8px 0 rgba(156, 92, 246, 0.08);
+        }
+      `}</style>
     </nav>
   );
 };
 
 export default Navbar;
+

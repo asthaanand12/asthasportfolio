@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { MapPin } from "lucide-react";
 import {
@@ -8,6 +7,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "./ui/dialog";
+import ZoomableImage from "./ZoomableImage";
 
 const experiences = [
   {
@@ -29,7 +29,7 @@ const experiences = [
     type: "Internship",
     description: "Designed and developed responsive web interfaces using HTML, CSS, and JavaScript. Utilized Git for version control and collaborated with design prototypes using Figma.",
     skills: ["JavaScript", "Web Development", "Application Development"],
-    certificate: "/lovable-uploads/3652ae6a-05b0-4214-92a3-78db5248267f.png",
+    certificate: "/lovable-uploads/da528dc6-a4a1-4e49-b82f-40f43222b141.png",
     credentialId: "EE/23/IN/EL/2304047"
   }
 ];
@@ -97,11 +97,18 @@ const Experience = () => {
                   <DialogTitle>{exp.title} Certificate</DialogTitle>
                 </DialogHeader>
                 <div className="mt-4">
-                  <img
-                    src={exp.certificate}
-                    alt={`${exp.title} Certificate`}
-                    className="w-full rounded-lg"
-                  />
+                  {exp.title === "Summer Intern at Eimple Labs Bangalore" ? (
+                    <ZoomableImage
+                      src={exp.certificate}
+                      alt={`${exp.title} Certificate`}
+                    />
+                  ) : (
+                    <img
+                      src={exp.certificate}
+                      alt={`${exp.title} Certificate`}
+                      className="w-full rounded-lg"
+                    />
+                  )}
                   <p className="text-sm text-gray-500 mt-2">
                     Credential ID: {exp.credentialId}
                   </p>

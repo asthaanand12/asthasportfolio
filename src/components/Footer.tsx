@@ -1,6 +1,7 @@
 
 import { ArrowUp } from "lucide-react";
 import { Link } from "react-scroll";
+import { Github, Linkedin } from "lucide-react"; // Use explicit icon import
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -71,11 +72,11 @@ const Footer = () => {
         </div>
         
         <hr className="my-8 border-gray-200" />
-        
+
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p>&copy; {currentYear} Astha Anand. All rights reserved.</p>
           
-          <div className="mt-4 md:mt-0">
+          <div className="mt-4 md:mt-0 flex items-center space-x-4">
             <Link
               to="home"
               spy={true}
@@ -86,6 +87,25 @@ const Footer = () => {
             >
               <ArrowUp size={20} className="text-data-dark" />
             </Link>
+            {/* Social Icons */}
+            <a
+              href="https://github.com/asthaanand12/My-Portfolio"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center w-10 h-10 ml-2 bg-gray-200 rounded-full hover:bg-data hover:text-white transition-colors"
+              aria-label="GitHub"
+            >
+              <Github />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/astha12"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center w-10 h-10 bg-gray-200 rounded-full hover:bg-data hover:text-white transition-colors"
+              aria-label="LinkedIn"
+            >
+              <Linkedin />
+            </a>
           </div>
         </div>
       </div>
@@ -94,3 +114,4 @@ const Footer = () => {
 };
 
 export default Footer;
+
