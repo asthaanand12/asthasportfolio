@@ -2,16 +2,17 @@
 import React, { useRef, useState } from "react";
 
 interface ZoomableImageProps {
-  src: string;
+  src?: string;
   alt: string;
+  srcList?: string[]; // new: supports multi-page
 }
 
-const ZoomableImage: React.FC<ZoomableImageProps> = ({ src, alt }) => {
+const ZoomableImage: React.FC<ZoomableImageProps> = ({ src, alt, srcList }) => {
   const [scale, setScale] = useState(1);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
-  const handleZoomIn = () => setScale(s => Math.min(s + 0.1, 2));
-  const handleZoomOut = () => setScale(s => Math.max(s - 0.1, 0.5));
+  const handleZoomIn = () => setScale((s) => Math.min(s + 0.1, 2));
+  const handleZoomOut = () => setScale((s) => Math.max(s - 0.1, 0.5));
   const handleReset = () => setScale(1);
 
   // Scroll controls (optional)
@@ -20,6 +21,9 @@ const ZoomableImage: React.FC<ZoomableImageProps> = ({ src, alt }) => {
       scrollContainerRef.current.scrollBy({ left: dx, top: dy, behavior: "smooth" });
     }
   };
+
+  // Use either a single image or a list
+  const images = srcList && srcList.length > 0 ? srcList : src ? [src] : [];
 
   return (
     <div>
@@ -35,15 +39,27 @@ const ZoomableImage: React.FC<ZoomableImageProps> = ({ src, alt }) => {
       </div>
       <div
         ref={scrollContainerRef}
-        className="overflow-auto border rounded-lg bg-gray-50 mx-auto max-h-[70vh] max-w-full" 
+        className="overflow-auto border rounded-lg bg-gray-50 mx-auto max-h-[70vh] max-w-full"
         style={{ minHeight: 300 }}
       >
-        <img
-          src={src}
-          alt={alt}
-          style={{ transform: `scale(${scale})`, transformOrigin: "top left", transition: "transform 0.25s" }}
-          className="block"
-        />
+        <div style={{ width: "100%" }}>
+          {images.map((img, idx) => (
+            <img
+              key={idx}
+              src={img}
+              alt={`${alt}${images.length > 1 ? ` (page ${idx + 1})` : ""}`}
+              style={{
+                transform: `scale(${scale})`,
+                transformOrigin: "top left",
+                transition: "transform 0.25s",
+                marginBottom: idx !== images.length - 1 ? 24 : 0,
+                width: "100%",
+                height: "auto",
+                display: "block",
+              }}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

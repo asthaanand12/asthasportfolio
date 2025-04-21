@@ -15,8 +15,11 @@ const references = [
     title: "Head of Department",
     department: "Computer Application and Cyber Security",
     institution: "Jharkhand Raksha Shakti University",
-    letter: null,
-    pdf: "/lovable-uploads/d417dcd4-4c0e-479a-a6b6-94a2426f9e18.pdf", // update path here if different
+    letter: [
+      "/lovable-uploads/df8744f1-2ee3-473d-a409-31c833925700.png",
+      "/lovable-uploads/8f35c6bc-7753-4304-8e35-cab2b417f0fb.png",
+    ],
+    pdf: null,
   },
   {
     name: "Dr. Priya Namrata Topno",
@@ -53,53 +56,41 @@ const References = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              {ref.pdf ? (
-                <div className="bg-white p-6 rounded-lg shadow-md">
-                  <h3 className="text-xl font-semibold text-gray-800">{ref.name}</h3>
-                  <p className="text-data font-medium">{ref.title}</p>
-                  {ref.department && (
-                    <p className="text-gray-600">{ref.department}</p>
-                  )}
-                  <p className="text-gray-600">{ref.institution}</p>
-                  <a
-                    href={ref.pdf}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block mt-4 text-blue-600 hover:text-blue-700 underline font-medium"
-                  >
-                    View Reference Letter (PDF)
-                  </a>
-                </div>
-              ) : (
-                <Dialog>
-                  <DialogTrigger asChild>
-                    <div className="bg-white p-6 rounded-lg shadow-md cursor-pointer hover:shadow-lg transition-shadow">
-                      <h3 className="text-xl font-semibold text-gray-800">{ref.name}</h3>
-                      <p className="text-data font-medium">{ref.title}</p>
-                      {ref.department && (
-                        <p className="text-gray-600">{ref.department}</p>
-                      )}
-                      <p className="text-gray-600">{ref.institution}</p>
-                      <button className="mt-4 text-blue-600 hover:text-blue-700">
-                        View Reference Letter
-                      </button>
-                    </div>
-                  </DialogTrigger>
-                  <DialogContent className="max-w-4xl w-[90vw]">
-                    <DialogHeader>
-                      <DialogTitle>Reference Letter from {ref.name}</DialogTitle>
-                    </DialogHeader>
-                    <div className="mt-4">
-                      {ref.letter && (
+              <Dialog>
+                <DialogTrigger asChild>
+                  <div className="bg-white p-6 rounded-lg shadow-md cursor-pointer hover:shadow-lg transition-shadow">
+                    <h3 className="text-xl font-semibold text-gray-800">{ref.name}</h3>
+                    <p className="text-data font-medium">{ref.title}</p>
+                    {ref.department && (
+                      <p className="text-gray-600">{ref.department}</p>
+                    )}
+                    <p className="text-gray-600">{ref.institution}</p>
+                    <button className="mt-4 text-blue-600 hover:text-blue-700">
+                      View Reference Letter
+                    </button>
+                  </div>
+                </DialogTrigger>
+                <DialogContent className="max-w-4xl w-[90vw]">
+                  <DialogHeader>
+                    <DialogTitle>Reference Letter from {ref.name}</DialogTitle>
+                  </DialogHeader>
+                  <div className="mt-4">
+                    {/* Handle both single string and array for letter */}
+                    {ref.letter &&
+                      (Array.isArray(ref.letter) ? (
+                        <ZoomableImage
+                          srcList={ref.letter}
+                          alt={`Reference letter from ${ref.name}`}
+                        />
+                      ) : (
                         <ZoomableImage
                           src={ref.letter}
                           alt={`Reference letter from ${ref.name}`}
                         />
-                      )}
-                    </div>
-                  </DialogContent>
-                </Dialog>
-              )}
+                      ))}
+                  </div>
+                </DialogContent>
+              </Dialog>
             </motion.div>
           ))}
         </div>
@@ -109,4 +100,3 @@ const References = () => {
 };
 
 export default References;
-
