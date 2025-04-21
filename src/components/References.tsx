@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import {
   Dialog,
@@ -6,6 +7,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import ZoomableImage from "./ZoomableImage";
 
 const references = [
   {
@@ -13,13 +15,13 @@ const references = [
     title: "Head of Department",
     department: "Computer Application and Cyber Security",
     institution: "Jharkhand Raksha Shakti University",
-    letter: "/path-to-reference-letter-1.png"
+    letter: "/lovable-uploads/e3de25ed-e935-45f9-8d4e-c4eeb00324d1.png"
   },
   {
     name: "Dr. Priya Namrata Topno",
     title: "Placement Cell In-Charge",
     institution: "Jharkhand Raksha Shakti University",
-    letter: "/path-to-reference-letter-2.png"
+    letter: "/lovable-uploads/c1bdad99-ee12-442a-9c03-e8c522b04959.png"
   }
 ];
 
@@ -63,15 +65,14 @@ const References = () => {
                     </button>
                   </div>
                 </DialogTrigger>
-                <DialogContent className="max-w-4xl">
+                <DialogContent className="max-w-4xl w-[90vw]">
                   <DialogHeader>
                     <DialogTitle>Reference Letter from {ref.name}</DialogTitle>
                   </DialogHeader>
                   <div className="mt-4">
-                    <img
+                    <ZoomableImage
                       src={ref.letter}
                       alt={`Reference letter from ${ref.name}`}
-                      className="w-full rounded-lg"
                     />
                   </div>
                 </DialogContent>
