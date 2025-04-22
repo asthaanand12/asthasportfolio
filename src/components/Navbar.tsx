@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import { Menu, X } from "lucide-react";
@@ -106,14 +105,15 @@ const Navbar = () => {
           </div>
         </div>
       )}
-      <style jsx>{`
-        .shadow-custom-md {
-          box-shadow: 0 2px 8px 0 rgba(156, 92, 246, 0.08);
-        }
-      `}</style>
+      <style>
+        {`
+          .shadow-custom-md {
+            box-shadow: 0 2px 8px 0 rgba(156, 92, 246, 0.08);
+          }
+        `}
+      </style>
     </nav>
   );
 };
 
 export default Navbar;
-

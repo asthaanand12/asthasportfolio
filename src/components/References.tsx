@@ -25,7 +25,7 @@ const references = [
     name: "Dr. Priya Namrata Topno",
     title: "Placement Cell In-Charge",
     institution: "Jharkhand Raksha Shakti University",
-    letter: "/lovable-uploads/c1bdad99-ee12-442a-9c03-e8c522b04959.png",
+    letter: "/lovable-uploads/881b3de7-3dd1-45b8-b889-f6b12575a9e1.png",
     pdf: null,
   }
 ];
