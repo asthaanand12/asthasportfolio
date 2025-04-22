@@ -5,7 +5,7 @@ import ContactForm from "./contact/ContactForm";
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-20 bg-beige-light/30">
+    <section id="contact" className="py-20 bg-gradient-to-b from-beige-light/30 to-white">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -14,7 +14,9 @@ const Contact = () => {
           viewport={{ once: true }}
           className="mb-12 text-center"
         >
-          <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 text-data-dark">Get In Touch</h2>
+          <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-data-dark to-data bg-clip-text text-transparent">
+            Get In Touch
+          </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Interested in working together or have any questions? Feel free to reach out to me using the form below or connect with me on social media.
           </p>
@@ -26,6 +28,7 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
+            className="transform hover:-translate-y-1 transition-transform duration-300"
           >
             <ContactInfo />
           </motion.div>
@@ -35,6 +38,7 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
             viewport={{ once: true }}
+            className="transform hover:-translate-y-1 transition-transform duration-300"
           >
             <ContactForm />
           </motion.div>
